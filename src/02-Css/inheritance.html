@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id-class selector</title>
+
+        
+    <style>
+
+        body{font-size: 16px; color: chocolate;} /* kapsadığı tüm elemanları inherit uygular eğer inherit edilebilir özelliği varsa */
+        p{ color: red; }
+        p{ border: 2px solid blue;}
+        em{border: inherit;}    /* borderi kalıtım al */
+        em{color:initial}       /* color ı kalıtım alma */
+
+
+    </style>
+
+</head>
+<body>
+    
+    <main>
+        <section>
+            <h1>Welcome to movieApp</h1>
+            <p>
+                Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Rerum, aliquid.
+            </p>
+            <h2>How it works?</h2>
+        </section>        
+    </main>
+
+</body>
+</html>
