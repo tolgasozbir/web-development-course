@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    
+    <form action="register.php">
+        <div>
+            <label for="name">Adınız</label>
+            <input type="text" id="name">
+        </div>
+
+        <div>
+            <label for="surname">Soyadınız</label>
+            <input type="text" id="surname">
+        </div>
+
+        <div>
+            <label for="sifre">Sifre</label>
+            <input type="password" id="sifre">
+        </div>
+
+        <div>
+            <label for="intro">Kendini Anlat</label>
+            <textarea id="intro"></textarea>
+        </div>
+
+        <div>
+            <p>Programlama dili seç</p>
+            <input type="radio" name="dil" id="c#">
+            <label for="c#">C#</label>
+            <input type="radio" name="dil" id="java">
+            <label for="java">Java</label>
+            <input type="radio" name="dil" id="dart">
+            <label for="dart">Dart</label>
+        </div>
+
+        <div>
+            <p>Bilgiğin diller</p>
+            <input type="checkbox" id="c#2">
+            <label for="c#2">C#</label>
+            <input type="checkbox"  id="java2">
+            <label for="java2">Java</label>
+            <input type="checkbox"  id="dart2">
+            <label for="dart2">Dart</label>
+        </div>
+
+        <div>
+            <label for="cities">şehir</label>
+            <select id="cities">
+                <option value="41">Kocaeli</option>
+                <option value="34">İstanbul</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="mail">Mail</label>
+            <input type="email" id="mail">
+        </div>
+
+        <div>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        
+        <button type="submit">Kaydet</button>
+        <button type="reset">Temizle</button>
+    
+    </form>
+
+</body>
+</html>

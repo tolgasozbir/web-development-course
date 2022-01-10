@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ReCap</title>
+</head>
+<body>
+    
+    <h1>Lütfen Formu Eksiksiz Doldurunuz.</h1>
+    <hr>
+
+    <div id="forms">
+        <div>
+            <form action="">
+                <h2>Hesap Bilgileriniz</h2>
+                <table>
+                    <tr>
+                        <td><label for="userName">Kullanıcı Adı :</label></td>
+                        <td><input type="text" id="userName" placeholder="Kullanıcı Adı Girin"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="eMail">E-posta :</label></td>
+                        <td><input type="email" id="eMail" placeholder="E-posta Girin"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Parola :</label></td>
+                        <td><input type="password" id="pass" placeholder="Şifre Girin"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    
+        <div>
+            <form action="">
+                <h2>Kişisel Bilgileriniz</h2>
+                <table>
+
+                    <tr>
+                        <td><label for="name">Adınız :</label></td>
+                        <td style="width: 50px;"></td>
+                        <td><input type="text" id="name" placeholder="Adınızı Girin"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="surName">Soyadınız :</label></td>
+                        <td></td>
+                        <td><input type="text" id="surName" placeholder="Soyadınızı Girin"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="city">Şehir :</label></td>
+                        <td></td>
+                        <td>
+                            <select id="city">
+                                <option value="41">Kocaeli</option>
+                                <option value="34">İstanbul</option>
+                                <option value="06">Ankara</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Cinsiyet :</td>
+                        <td></td>
+                        <td>
+                            <input type="radio" name="cinsiyet" id="Erkek">
+                            <label for="Erkek">Erkek</label>
+                            <input type="radio" name="cinsiyet" id="Kadın">
+                            <label for="Kadın">Kadın</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Hobileriniz :</td>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" id="Sinema">
+                            <label for="Sinema">Sinema</label>
+                            <input type="checkbox" id="Spor">
+                            <label for="Spor">Spor</label>
+                            <input type="checkbox"> Kitap
+                            <input type="checkbox"> Müzik
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button type="submit">Kaydet</button>
+                            <button type="reset">Temizle</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+
+</body>
+</html>
