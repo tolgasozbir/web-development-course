@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <style>
+        * { margin: 0; }
+
+        #showcase { 
+            background-color: #7D90C5;
+            padding: 50px;          /* kutu yerine içerik (yazı vs) kayıyor */
+        }
+
+        #how-it-works { 
+            background-color: #ABc123; 
+        }
+
+        h1 {background-color: #3b557c; 
+            padding: 50px;
+            /*border: 5px solid white;     4 köşeye uygular - kalınlık çizgiTürü renk  */
+            border-left: 5px solid salmon;
+            border-top: 8px dotted forestgreen;
+        }
+
+        nav { background-color: #4b403e;
+             padding: 20px; 
+        }
+
+        a {
+            padding: 10px; 
+            border: 1px solid #24833c;
+            /*border-radius: 6px;         /* 4 köşeden   */ 
+            /*border-radius: 6px 2px; /* sol üst sağ alt 6 - sağ üst sol at 2 */
+            border-radius: 6px 6px 0 0; /* sol sağ üst 6 alt taraf 0  */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section id="showcase">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2>How it works?</h2>
+        </section>
+    </main>
+
+</body>
+</html>

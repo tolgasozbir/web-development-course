@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .box{ height: 60px; width: 60px; display: inline-block;}  /* blockları yan yana getirir width-height alır (inline olursa içeriği kadar yer kaplar) */ 
+        #first { background-color: red; }
+        #second { background-color: green; }
+        #third { background-color: blue; }
+        a{
+            height: 100px; /* height verilmezse kendi içeriği kadar yer kaplar */
+            width: 100px;   /* width verilmezse alanı komple kaplar*/
+            display: block; /* alanı komple kapladığından alt alta sıralanır */
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- display : none | inline | inline-block | block -->
+
+    <!-- inline içeriği kadar yer kaplıyor width height değerleri işlemez padding alır -->
+    <!-- inline-block width-height verebilmek ve yan yana gelebilmelerini sağlar -->
+    <!-- block içeriği kadar yer kaplayan nesneler width-height değeri alır 
+        width değeri verilmezse satırı kaplar block seklinde olucağından alt alta sıralanır -->
+
+
+    <div id="container">
+        <div class="box" id="first">first</div>
+        <div class="box" id="second">second</div>
+        <div class="box" id="third">third</div>
+    </div>
+
+    <div>
+        <a href="">Home</a>
+        <a href="">Movies</a>
+        <a href="">Contact</a>
+    </div>
+
+</body>
+</html>

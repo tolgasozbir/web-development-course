@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+        * { margin: 0; }
+        #showcase { 
+            background-color: #8Fa0D5;
+            /*margin: 20px;             all side 20px       */
+            /*margin: 20px 30px;        top-bot 20px & left-right 30px      */
+            margin: 30px 20px 10px; /*  top 30   left-right 20   bot 10 px */
+        }
+        #how-it-works { 
+            background-color: #ABc123;
+            /*margin: auto;            tüm yerlerden eşitler kendisini */
+            /* margin: 0 auto;         üst alttan 0 px sağ sol dan ortalar kendisini otomatik */
+            margin: 20px auto;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section id="showcase">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2>How it works?</h2>
+        </section>
+    </main>
+
+</body>
+</html>
