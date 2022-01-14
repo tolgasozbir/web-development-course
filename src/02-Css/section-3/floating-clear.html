@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating</title>
+
+    <style>
+
+        #container{
+            background-color: chocolate;
+        }
+
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            float: right;
+        }
+
+        .clearfix::after{
+            content: "";
+            display: block;         /* v2 */
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="container" class="clearfix">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <!-- <div style="clear: both;"></div>       v1   -->
+    </div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio non sunt cupiditate perferendis, ea totam molestias odit inventore ducimus veniam sint culpa nesciunt pariatur obcaecati omnis, voluptates ratione facilis dolore!</p>
+
+</body>
+</html>
