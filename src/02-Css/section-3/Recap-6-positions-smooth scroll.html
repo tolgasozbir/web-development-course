@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    
+    <link rel="stylesheet" href="../../02-Css/section-3/buttons.css">
+
+    <style>
+        
+        *{ box-sizing: border-box; }
+
+        html {scroll-behavior: smooth;}
+   
+        body{
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #showcase { 
+            background: url("../../02-Css/section-2/bg-1.jpg");
+            background-position: bottom right;
+            height: 500px;
+            width: 100%;
+            padding: 10px;
+            position: relative;
+            margin-top: 69px;
+        }
+
+        #showcase h1{
+            position: absolute;
+            top: 50%;
+            margin: 0;
+            font-size: 45px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-header{
+            background-color: #ffc400;
+            padding: 8px 16px;
+            font-family: 'Luxurious Roman', cursive;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+        }
+
+        .main-nav{
+            display: inline-block;
+            text-align: right;
+            width: calc(100% - 105px);   /*sayfanın %100'ünden 74 piksel çıkarıyoruz */
+        }
+
+        .main-nav__items{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .main-nav__item{
+            display: inline-block;
+            margin: 8px;
+
+        }
+
+        .main-nav__item a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .main-header__logo{
+            color: #fff;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .main-nav__item a::before{
+            content: "\2022";
+            margin-right: 4px;
+        }
+
+        .main-nav__item a:hover{
+            color: #7D90C5;
+        }
+
+        .main-nav__item a:active{
+            color: #fff;
+        }
+
+        .main-nav__item__login a::before{
+            content: none;
+        }
+
+        #how-it-works { 
+            padding: 10px;
+            text-align: center;
+        }
+
+        #how-it-works h2{ 
+            color: #3e4555;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .row{
+            margin-bottom: 40px;
+        }
+
+        .col-2{
+            display: inline-block;
+            width: calc(50% - 4px);
+            height: 350px;
+        }
+
+        .col-3{
+            display: inline-block;
+            width: 30%;
+            padding: 16px;
+            margin: 8px;
+        }
+
+        .icon-box h3{
+            color: #3e4555;
+            font-size: 26px;
+        }
+
+        .icon-box i{
+            color: #7D90C5 ;
+        }
+
+        .features__left{
+            background: url(../../02-Css/section-2/features.jpeg);
+            background-position: top center;
+            background-size: cover;
+        }
+
+        .features__right{
+            background-color: #edf5f7;
+            padding: 40px;
+            vertical-align: top;
+        }
+
+        .features__right h3{
+            font-size: 26px;
+        }
+
+        .section-title{
+            text-align: center;
+            margin-bottom: 40px;
+            color: #3e4555;
+            font-size: 30px;
+        }
+
+        .plan{
+            text-align: center;
+            float: left;
+            padding: 5px;
+            width: 33.3%;
+        }
+
+        .recommended_plan{
+            color: #fff;
+            background-color: #7D90C5!important ;
+        }
+
+        .plan__badge{
+            background-color: #fff;
+            color: #36249c;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        
+        .inner-plan{
+            background-color: #edf5f7;
+            padding: 25px 10px;
+            border-radius: 5px;
+            box-shadow: 5px 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35) ;
+            transition: box-shadow .4s;
+        }
+
+        .inner-plan:hover{
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.70) ;
+        }
+
+        .plan__features{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .plan--featured{
+            position: relative;
+            top: -20px;
+        }
+
+        .plan__features li{
+            margin: 6px 0;
+        }
+
+        .container{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #scroll-up{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        #scroll-up i{
+            color: #ffc400;
+            font-size: 45px;
+            transition: color 0.6s;
+        }
+
+        #scroll-up i:hover{
+            color: #15ff00;
+        }
+
+    </style>
+</head>
+<body id="body">
+
+    <header class="main-header">
+        <a href="#" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="#">Movies</a>
+                </li>                
+                <li class="main-nav__item">
+                    <a href="#">Series</a>
+                </li>                
+                <li class="main-nav__item main-nav__item__login">
+                    <a href="#" class="btn btn-primary">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="showcase">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+
+            <div class="row">
+                <h2 class="section-title">How it works?</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vitae?</p>
+            </div>
+
+            <div class="row">
+                <div class="icon-box col-3">
+                    <i class="fas fa-sign-in-alt fa-3x"></i>
+                    <h3>Register</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit in, dolor animi inventore voluptas ex?</p>
+                </div>
+                <div class="icon-box col-3">
+                    <i class="fab fa-buffer fa-3x"></i>
+                    <h3>Choose a Plan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit in, dolor animi inventore voluptas ex?</p>
+                </div>
+                <div class="icon-box col-3">
+                    <i class="far fa-smile fa-3x"></i>
+                    <h3>Enjoy Movies</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit in, dolor animi inventore voluptas ex?</p>
+                </div>
+            </div>
+
+        </section>
+        <section id="features">
+            <div class="row">
+                <div class="col-2 features__left"></div><div class="col-2 features__right">
+                    <h3>Watch all Movies & TV Show once they get released!</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores rerum corporis qui maxime explicabo molestiae illo ad repudiandae. Quae odio quisquam ex architecto veritatis voluptatibus sapiente commodi maxime ab expedita.</p>
+                    <a href="#" class="btn btn-primary">View Features</a>
+                </div>
+            </div>
+        </section>
+        <section id="plans">
+            <div class="row">
+                <h2 class="section-title">Become a Premium Member</h2>
+                <div class="container clearfix">
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <h2>Free</h2>
+                            <h3>0/month</h3>
+                            <ul class="plan__features">
+                                <li>Hd Avaible</li>
+                                <li>Unlimited Movies and Tv shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Download and watch offline</li>
+                                <li>Screens can you watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-outline">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan plan--featured">
+                            <div class="inner-plan recommended_plan">
+                            <h2 class="plan__badge">Recommended</h2>
+                            <h2>Basic</h2>
+                            <h3>$9.99/month</h3>
+                            <ul class="plan__features">
+                                <li>Hd Avaible</li>
+                                <li>Unlimited Movies and Tv shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Download and watch offline</li>
+                                <li>Screens can you watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-outline">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <h2>Premium</h2>
+                            <h3>$19.99/month</h3>
+                            <ul class="plan__features">
+                                <li>Hd Avaible</li>
+                                <li>Unlimited Movies and Tv shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Download and watch offline</li>
+                                <li>Screens can you watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-outline">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#body"id="scroll-up">
+        <i class="fas fa-chevron-circle-up fa-3x" ></i>
+    </a>
+
+</body>
+</html>
