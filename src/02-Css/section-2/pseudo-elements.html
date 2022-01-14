@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements</title>
+
+    <style>
+
+        p::first-line{
+            color: brown;
+        }
+
+        p::first-letter{
+            font-size: 36px;
+        }
+
+        p.about::first-line{        /* class'ı about olan p tagları */
+            color: orange;
+        }
+
+        ::selection{
+            background-color: hotpink;
+        }
+
+        p::after{                   /* p tagın sonuna */
+            content: "|HI!| \6d20";       /* tırnak içine yazılan değeri seçili etikete ekler */
+            padding-left: 8px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Pseudo-elements -->
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias soluta iusto quibusdam tenetur, ab velit. Nam delectus porro ipsa autem, inventore dolore pariatur recusandae esse, eos repudiandae rerum? Atque, perferendis?
+    </p>
+
+    <p class="about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam explicabo aut adipisci culpa incidunt obcaecati rerum doloribus similique et, earum suscipit natus dolor at eligendi porro veniam blanditiis unde rem!
+    </p>
+
+</body>
+</html>
