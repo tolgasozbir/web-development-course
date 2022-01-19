@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;    
+         
+         
+            height: 500px;
+            background-color: #034f84;
+        }
+
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+
+            /* flex: 0 1 200px;                 */
+        }
+
+        .item-1 {
+            flex: 25%;
+            /* flex-grow: 2; */
+        }
+
+        .item-2 {
+            flex: 25%;
+            /* flex-grow: 1; */
+        }
+
+        .item-3 {
+            order: -1;
+            flex: 50%;
+            /* flex-basis: 200px; */
+            /* flex-shrink: 0; */
+        }
+
+        /*
+        flex 0 1 200px : 0=grow 1=shrink 200px=basis değerini gösterir
+        flex-grow :     diğer elemanlar hizalanır kalan yeri kendisine ayırır flutter expanded gibi
+        flex :          verilen yüzde kadar ekranı kaplar
+        flex:basis      ekranda yer kalmayıncaya kadar verilen değerde kalmaya zorlar
+        flex:shrink 1 : (default 1) 0 olduğunda basis e verilen değeri korur yer kalmasa bile aynı değerde kalır
+
+
+        */
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item item-1">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
+    </div>
+
+
+</body>
+</html>
